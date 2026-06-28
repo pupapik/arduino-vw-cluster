@@ -51,6 +51,20 @@ Tested on **Arduino Uno** and **Arduino Nano**.
 
 There's also a jumper on the MCP2515 board that needs to be connected (this is typically the 120Ω termination resistor jumper).
 
+**Alternative: wiring directly to the 32-pin cluster connector**
+
+If you're wiring straight into one of the cluster's 32-pin connectors (rather than through an intermediate connector), these pin numbers were used:
+
+| Function | Pin |
+|---|---|
+| GND | 16 |
+| +12V | 31, 32 |
+| CAN | 28, 29 |
+
+Pin 31 is believed to be constant +12V and pin 32 switched +12V (after ignition) — also not fully confirmed, so if your cluster behaves oddly (e.g. doesn't power down with ignition off), try swapping which pin gets which feed.
+
+The 28/29 CAN pair wasn't confirmed against the cluster's own documentation during this build — which one is CAN-H and which is CAN-L wasn't verified. For reference, a pinout posted on the [T6 Forum](https://www.t6forum.com/threads/cluster-32-pin-connector-data.46433/) for the same 32-pin connector lists pin 28 as CAN-H and pin 29 as CAN-L, with +12V on pin 31 and GND on pin 16 — consistent with the pins above. If your cluster doesn't come up, try swapping H/L on this pair.
+
 **Power**
 
 | Connection | Goes to |
