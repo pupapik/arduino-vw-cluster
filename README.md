@@ -4,7 +4,7 @@ Drive a real Volkswagen T5/T6 instrument cluster (and many other VW-based cluste
 
 No car required. No original ECU required. Just the cluster, a CAN module, and an Arduino.
 
-Works with any software that can send plain text over a serial port, including [SimHub](https://www.simhubdash.com/) (see below). Confirmed working with **Forza Horizon 5** and **BeamNG.drive** through SimHub; it should work with any title SimHub supports, since the protocol only needs a handful of common telemetry properties (speed, RPM, etc.).
+Works with any software that can send plain text over a serial port, including [SimHub](https://www.simhubdash.com/) (see below). Confirmed working with **Forza Horizon 6** and **BeamNG.drive** through SimHub; it should work with any title SimHub supports, since the protocol only needs a handful of common telemetry properties (speed, RPM, etc.).
 
 ## How it works
 
