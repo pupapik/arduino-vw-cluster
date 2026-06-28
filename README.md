@@ -147,6 +147,10 @@ You can extend this the same way to map any other SimHub property to the remaini
 - Fuel level counter currently increments automatically over time as a placeholder; replace this with real sim telemetry if you want accurate fuel display.
 - This sketch only emulates a fixed set of CAN IDs/signals. If your sim or game telemetry needs to drive other gauges or warning lights, you'll need to extend the packet-building functions.
 
+## Credits
+
+The CAN message layout used here (message IDs, byte structure, the coolant temperature lookup table, and related details) draws heavily on the reverse-engineering work documented in [an-ven/VW-Instrument-Cluster-Controller](https://github.com/an-ven/VW-Instrument-Cluster-Controller), which covers a 2018 VW Up cluster. That project (BSD 2-Clause licensed) was an enormous time-saver and is the reason this was feasible at all — big thanks to Andraž Vene for documenting it so thoroughly.
+
 ## Disclaimer
 
 This project is intended for sim racing / hobby use on a bench-mounted cluster, disconnected from any real vehicle. It is not intended to be connected to or used in an actual running vehicle's CAN bus. Wiring this incorrectly to a real car's network could trigger faults or damage other modules. Use at your own risk.
